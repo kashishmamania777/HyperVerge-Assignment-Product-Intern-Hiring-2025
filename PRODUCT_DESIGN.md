@@ -142,6 +142,33 @@ A robust experience in poor connectivity is non-negotiable.
 - **Idempotent APIs:** Every mutating API request (POST, PUT, DELETE) must include a unique idempotency key. If the server receives a request with a key it has already processed, it will not re-process the request but will return the original response. This prevents duplicate loan applications or transactions due to client-side retries.
 - **Asynchronous Processing:** Long-running tasks, like the full underwriting analysis, are handled asynchronously. The client submits the data and immediately gets a "processing" response. The server notifies the client via a push notification once the task is complete.
 
+### 3.3. API Endpoints (Mock)
+To facilitate a functional frontend prototype, the following mock API endpoints have been created.
+
+#### `POST /api/apply`
+-   **Description:** Initiates a new loan application process.
+-   **Request Body:** None (for this mock).
+-   **Success Response (200):**
+    ```json
+    {
+      "status": "success",
+      "message": "Application process initiated."
+    }
+    ```
+
+#### `GET /api/offer`
+-   **Description:** Retrieves a mock loan offer after a simulated processing delay.
+-   **Request Body:** None.
+-   **Success Response (200):**
+    ```json
+    {
+      "loanAmount": "₹25,000",
+      "tenure": "12 Months",
+      "monthlyPayment": "₹2,300",
+      "clarityNote": "You will receive ₹24,500 (after processing fees)."
+    }
+    ```
+
 ## 4. Additional Considerations
 
 ### 4.1. Defining and Measuring Success (KPIs)
