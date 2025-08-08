@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Loan Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Screen 1: Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <div class="header">
+                <h1>AI Loan Sahayak</h1>
+            </div>
+            <div class="main-content">
+                <div class="mascot">🤖</div>
+                <p class="greeting">Tap the mic and tell me what you need.</p>
+                <button id="mic-button" class="mic-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+                </button>
+            </div>
+            <div class="footer">
+                <button id="apply-loan-btn" class="btn btn-primary">Apply for a New Loan</button>
+            </div>
+        </div>
+
+        <!-- Screen 2: Document Scanning -->
+        <div id="scan-screen" class="screen">
+            <div class="header">
+                <h2>Let's scan your PAN Card</h2>
+            </div>
+            <div class="main-content">
+                <div class="camera-view">
+                    <div class="card-overlay"></div>
+                    <p class="camera-instructions">Fit your card inside the box.</p>
+                </div>
+            </div>
+            <div class="footer">
+                <button id="scan-complete-btn" class="btn btn-primary">Next Step</button>
+                <button id="back-to-welcome-btn" class="btn btn-secondary">Back</button>
+            </div>
+        </div>
+
+        <!-- Screen 3: Loan Offer -->
+        <div id="offer-screen" class="screen">
+            <div class="header">
+                <h2>Your Loan Offer Is Ready!</h2>
+            </div>
+            <div class="main-content">
+                <div class="offer-details">
+                    <div class="offer-item">
+                        <span class="label">Loan Amount</span>
+                        <span class="value">₹15,000</span>
+                    </div>
+                    <div class="offer-item">
+                        <span class="label">Tenure</span>
+                        <span class="value">6 Months</span>
+                    </div>
+                    <div class="offer-item">
+                        <span class="label">Monthly Payment (EMI)</span>
+                        <span class="value">₹2,600</span>
+                    </div>
+                </div>
+                <p class="clarity-note">You will receive ₹14,750 (after processing fees).</p>
+            </div>
+            <div class="footer">
+                <button id="accept-offer-btn" class="btn btn-success">Accept Offer</button>
+                <button id="decline-offer-btn" class="btn btn-danger">Decline</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
